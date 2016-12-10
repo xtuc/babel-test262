@@ -1,0 +1,23 @@
+{
+  "name": "babel-test262",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test262-harness 'test262/test/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtuc/babel-test262.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xtuc/babel-test262/issues"
+  },
+  "homepage": "https://github.com/xtuc/babel-test262#readme",
+  "dependencies": {
+    "test262-harness": "^2.4.0"
+  }
+}
