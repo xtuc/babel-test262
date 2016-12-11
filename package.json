@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test262-harness 'test262/test/**/*.js' --threads 8 --hostPath ./node_modules/.bin/babel-node"
+    "test": "npm run test-built-ins",
+    "test-all": "test262-harness 'test262/test/**/*.js' --threads 8 --hostArgs ./node_modules/.bin/babel-node",
+    "test-built-ins": "test262-harness 'test262/test/built-ins/**/*.js' --threads 8 --hostArgs ./node_modules/.bin/babel-node"
   },
   "repository": {
     "type": "git",
