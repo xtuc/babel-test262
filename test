@@ -3,11 +3,30 @@
 PATH=${PATH}:./node_modules/.bin
 
 THREADS=8
-BIN=babel-node
+BIN=node
 REPORTER=mocha-dot
+TARGET_BROWSERS="last 200 versions"
 
-./test262-harness/bin/run.js \
-  'test262/test/built-ins/**/*.js' \
-  --threads $THREADS \
-  --hostArgs $BIN \
-  --reporter $REPORTER
+# Usage: run_tests [suite] [dir] [file]
+run_tests() {
+  SUITE="${1-*}"
+  DIR="${2-**}"
+  FILE="${3-**}"
+
+  TESTS="test262/test/$SUITE/$DIR/$FILE.js"
+
+  echo "running $TESTS"
+
+  TARGET_BROWSERS=$TARGET_BROWSERS \
+  ./test262-harness/bin/run.js \
+    "$TESTS" \
+    --threads $THREADS \
+    --hostArgs $BIN \
+    --reporter $REPORTER
+}
+
+run_tests built-ins Map
+run_tests built-ins Set
+
+run_tests language expressions
+run_tests language types
