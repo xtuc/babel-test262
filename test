@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PATH=${PATH}:./node_modules/.bin
+
+THREADS=8
+BIN=babel-node
+REPORTER=mocha-dot
+
+./test262-harness/bin/run.js \
+  'test262/test/built-ins/**/*.js' \
+  --threads $THREADS \
+  --hostArgs $BIN \
+  --reporter $REPORTER

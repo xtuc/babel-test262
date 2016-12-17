@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test-built-ins",
-    "test-all": "./test262-harness/bin/run.js 'test262/test/**/*.js' --threads 8 --hostArgs ./node_modules/.bin/babel-node --reporter mocha-dot",
-    "test-built-ins": "./test262-harness/bin/run.js 'test262/test/built-ins/**/*.js' --threads 8 --hostArgs ./node_modules/.bin/babel-node --reporter mocha-dot"
+    "test": "./test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +18,7 @@
   },
   "homepage": "https://github.com/xtuc/babel-test262#readme",
   "dependencies": {
-    "babel-cli": "^6.18.0"
+    "babel-cli": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0"
   }
 }
