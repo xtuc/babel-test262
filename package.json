@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "git submodule update --init --recursive",
+    "postinstall": "npm i --prefix ./test262-harness",
     "test": "./test"
   },
   "repository": {
