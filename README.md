@@ -1,5 +1,7 @@
 # babel-test262
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xtuc/babel-test262.svg)](https://greenkeeper.io/)
+
 Tests are transpiled using babel-preset-env.
 
 ## Usage
